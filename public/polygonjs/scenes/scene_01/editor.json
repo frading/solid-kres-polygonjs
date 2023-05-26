@@ -1,0 +1,227 @@
+{
+	"multiple_panel": {
+		"split_ratio": 0.562890625,
+		"split_panel0": {
+			"split_ratio": 0.36837455830388693,
+			"split_panel0": {
+				"panelTypes": ["viewer"],
+				"currentPanelIndex": 0,
+				"panel_data": {
+					"camera": "/cameras/cameras:sopGroup/perspectiveCamera1",
+					"isViewerInitLayoutData": true,
+					"linkIndex": 1,
+					"overlayedNetwork": {
+						"allowed": false,
+						"displayed": true,
+						"initLayoutData": {
+							"camera": {
+								"position": {
+									"x": 200,
+									"y": -200
+								},
+								"zoom": 1
+							},
+							"history": {
+								"2": {
+									"position": {
+										"x": 0,
+										"y": 0
+									},
+									"zoom": 1
+								},
+								"36": {
+									"position": {
+										"x": 100,
+										"y": -125
+									},
+									"zoom": 1
+								},
+								"289": {
+									"position": {
+										"x": -150,
+										"y": -50
+									},
+									"zoom": 1
+								},
+								"825": {
+									"position": {
+										"x": -150,
+										"y": -50
+									},
+									"zoom": 1
+								},
+								"884": {
+									"position": {
+										"x": -1075,
+										"y": -400
+									},
+									"zoom": 1
+								},
+								"973": {
+									"position": {
+										"x": 200,
+										"y": -200
+									},
+									"zoom": 1
+								},
+								"997": {
+									"position": {
+										"x": 0,
+										"y": 0
+									},
+									"zoom": 1
+								},
+								"1942": {
+									"position": {
+										"x": 200,
+										"y": -200
+									},
+									"zoom": 1
+								}
+							},
+							"paramsDisplayed": false,
+							"linkIndex": 1
+						}
+					}
+				}
+			},
+			"split_panel1": {
+				"panelTypes": ["params", "sceneTree"],
+				"currentPanelIndex": 0,
+				"panel_data": {
+					"active_folder": 979,
+					"linkIndex": 1
+				}
+			},
+			"split_mode": "vertical"
+		},
+		"split_panel1": {
+			"panelTypes": ["network", "params", "viewer"],
+			"currentPanelIndex": 0,
+			"panel_data": {
+				"camera": {
+					"position": {
+						"x": -65.20709911396276,
+						"y": -351.441807338487
+					},
+					"zoom": 0.5432507387309001
+				},
+				"history": {
+					"2": {
+						"position": {
+							"x": 62.54553192632958,
+							"y": 223.1583293886238
+						},
+						"zoom": 0.4889256648578063
+					},
+					"36": {
+						"position": {
+							"x": -1417.2369062918058,
+							"y": -281.28460806719727
+						},
+						"zoom": 0.2598351442576988
+					},
+					"289": {
+						"position": {
+							"x": -423.7520437568476,
+							"y": -149.6004167917071
+						},
+						"zoom": 0.5432507387308959
+					},
+					"825": {
+						"position": {
+							"x": -277.4825693965712,
+							"y": -153.6261821410725
+						},
+						"zoom": 0.7451999159545896
+					},
+					"884": {
+						"position": {
+							"x": -1075,
+							"y": -400
+						},
+						"zoom": 0.21046646684873516
+					},
+					"973": {
+						"position": {
+							"x": -65.20709911396276,
+							"y": -351.441807338487
+						},
+						"zoom": 0.5432507387309001
+					},
+					"997": {
+						"position": {
+							"x": 0,
+							"y": 0
+						},
+						"zoom": 0.7451999159545942
+					},
+					"1942": {
+						"position": {
+							"x": 27.582364031207817,
+							"y": -506.52902652386376
+						},
+						"zoom": 0.35642680968134294
+					}
+				},
+				"paramsDisplayed": false,
+				"linkIndex": 1
+			}
+		},
+		"split_mode": "horizontal"
+	},
+	"currentNodes": ["/geo1/physicsPlayer1", "/", "/", "/", "/", "/", "/", "/"],
+	"navigationHistory": {
+		"nodePaths": {
+			"1": [
+				"/geo1",
+				"/geo1/physicsWorld1",
+				"/geo1",
+				"/geo1/physicsPlayer1",
+				"/geo1",
+				"/geo1/physicsPlayer1",
+				"/geo1",
+				"/geo1/physicsPlayer1",
+				"/geo1",
+				"/geo1/physicsWorld1",
+				"/geo1",
+				"/geo1/physicsPlayer1",
+				"/geo1",
+				"/",
+				"/geo1",
+				"/geo1/physicsPlayer1",
+				"/geo1",
+				"/geo1/physicsPlayer1",
+				"/geo1",
+				"/geo1/physicsPlayer1"
+			],
+			"2": ["/"],
+			"3": ["/"],
+			"4": ["/"],
+			"5": ["/"],
+			"6": ["/"],
+			"7": ["/"],
+			"8": ["/"]
+		},
+		"index": {
+			"1": 19,
+			"2": 0,
+			"3": 0,
+			"4": 0,
+			"5": 0,
+			"6": 0,
+			"7": 0,
+			"8": 0
+		}
+	},
+	"fullscreenPanelId": null,
+	"saveOptions": {
+		"createExport": true,
+		"checkRemoteAssetsUse": true,
+		"minimizeFilesCount": false,
+		"compressJs": true,
+		"createZip": false,
+		"runPostExportCommand": false
+	},
+	"paramsModal": []
+}

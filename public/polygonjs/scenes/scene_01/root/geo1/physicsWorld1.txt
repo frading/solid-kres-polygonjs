@@ -1,0 +1,23 @@
+// insert defines
+class CustomActorEvaluator extends ActorEvaluator {
+	// insert members
+	constructor(scene, object3D) {
+		super(scene, object3D);
+		// insert after constructor
+	}
+	// insert body
+
+	onScenePause() {
+		this.onScenePause1();
+	}
+	// /geo1/physicsWorld1/onScenePause1
+	onScenePause1() {
+		this.physicsWorldReset1(0);
+	}
+
+	// /geo1/physicsWorld1/physicsWorldReset1
+	physicsWorldReset1() {
+		physicsWorldReset(this.object3D);
+	}
+}
+return CustomActorEvaluator;

@@ -1,0 +1,271 @@
+{
+	"type": "physicsPlayer",
+	"nodes": {
+		"onKey1": {
+			"type": "onKey",
+			"params": {
+				"keyCodes": "Space ShiftLeft ShiftRight KeyW KeyA KeyS KeyD"
+			}
+		},
+		"onTick1": {
+			"type": "onTick"
+		},
+		"physicsPlayerUpdate1": {
+			"type": "physicsPlayerUpdate",
+			"maxInputsCount": 15,
+			"inputs": [
+				null,
+				null,
+				{
+					"index": 2,
+					"inputName": "left",
+					"node": "setPlayerInput1",
+					"output": "left"
+				},
+				{
+					"index": 3,
+					"inputName": "right",
+					"node": "setPlayerInput1",
+					"output": "right"
+				},
+				{
+					"index": 4,
+					"inputName": "backward",
+					"node": "setPlayerInput1",
+					"output": "backward"
+				},
+				{
+					"index": 5,
+					"inputName": "forward",
+					"node": "setPlayerInput1",
+					"output": "forward"
+				},
+				{
+					"index": 6,
+					"inputName": "run",
+					"node": "setPlayerInput1",
+					"output": "run"
+				},
+				{
+					"index": 7,
+					"inputName": "jump",
+					"node": "setPlayerInput1",
+					"output": "jump"
+				}
+			]
+		},
+		"setPlayerInput1": {
+			"type": "setPlayerInput",
+			"maxInputsCount": 2,
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "trigger",
+					"node": "onKey1",
+					"output": "trigger"
+				}
+			]
+		},
+		"code1": {
+			"type": "code",
+			"params": {
+				"codeTypescript": "\nexport class CodeJsProcessor extends BaseCodeJsProcessor {\n\toverride initializeProcessor(){\n\t\tthis.io.inputs.setNamedInputConnectionPoints([\n\t\t\tnew JsConnectionPoint('myBoolParam', JsConnectionPointType.BOOLEAN),\n\t\t]);\n\t\tthis.io.outputs.setNamedOutputConnectionPoints([\n\t\t\tnew JsConnectionPoint(JsConnectionPointType.TRIGGER, JsConnectionPointType.TRIGGER),\n\t\t]);\n\t}\n\toverride setTriggerableLines(controller: JsLinesCollectionController) {\n\t\tconst object3D = this.inputObject3D(this, controller);\n\t\tconst myBoolParam = this.variableForInput(controller, 'myBoolParam');\n\t\t\n\t\tconst bodyLines = [\n\t\t\t\t'window.sendExtMsg(\"moveBall\")',\n\t\t\t\tobject3D + '.updateMatrix()'\t\t\n\t\t]\n\n\t\tthis.addTriggerableLines(controller, bodyLines);\n\t}\n}\n",
+				"codeJavascript": "export class CodeJsProcessor extends BaseCodeJsProcessor {\r\n    initializeProcessor() {\r\n        this.io.inputs.setNamedInputConnectionPoints([\r\n            new JsConnectionPoint('myBoolParam', JsConnectionPointType.BOOLEAN),\r\n        ]);\r\n        this.io.outputs.setNamedOutputConnectionPoints([\r\n            new JsConnectionPoint(JsConnectionPointType.TRIGGER, JsConnectionPointType.TRIGGER),\r\n        ]);\r\n    }\r\n    setTriggerableLines(controller) {\r\n        const object3D = this.inputObject3D(this, controller);\r\n        const myBoolParam = this.variableForInput(controller, 'myBoolParam');\r\n        const bodyLines = [\r\n            'window.sendExtMsg(\"moveBall\")',\r\n            object3D + '.updateMatrix()'\r\n        ];\r\n        this.addTriggerableLines(controller, bodyLines);\r\n    }\r\n}\r\n"
+			},
+			"maxInputsCount": 3,
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "trigger",
+					"node": "onKey1",
+					"output": "trigger"
+				},
+				null,
+				{
+					"index": 2,
+					"inputName": "myBoolParam",
+					"node": "or1",
+					"output": "or"
+				}
+			]
+		},
+		"or1": {
+			"type": "or",
+			"params": {
+				"boolean0": {
+					"type": "boolean",
+					"default_value": false,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"boolean1": {
+					"type": "boolean",
+					"default_value": false,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"boolean2": {
+					"type": "boolean",
+					"default_value": false,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"boolean3": {
+					"type": "boolean",
+					"default_value": false,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"boolean4": {
+					"type": "boolean",
+					"default_value": false,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"boolean5": {
+					"type": "boolean",
+					"default_value": false,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"boolean6": {
+					"type": "boolean",
+					"default_value": false,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"maxInputsCount": 7,
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "boolean0",
+					"node": "setPlayerInput1",
+					"output": "left"
+				},
+				{
+					"index": 1,
+					"inputName": "boolean1",
+					"node": "setPlayerInput1",
+					"output": "right"
+				},
+				{
+					"index": 2,
+					"inputName": "boolean2",
+					"node": "setPlayerInput1",
+					"output": "backward"
+				},
+				{
+					"index": 3,
+					"inputName": "boolean3",
+					"node": "setPlayerInput1",
+					"output": "forward"
+				},
+				{
+					"index": 4,
+					"inputName": "boolean4",
+					"node": "setPlayerInput1",
+					"output": "run"
+				},
+				{
+					"index": 5,
+					"inputName": "boolean5",
+					"node": "setPlayerInput1",
+					"output": "jump"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "boolean0",
+						"type": "boolean",
+						"isArray": false
+					},
+					{
+						"name": "boolean1",
+						"type": "boolean",
+						"isArray": false
+					},
+					{
+						"name": "boolean2",
+						"type": "boolean",
+						"isArray": false
+					},
+					{
+						"name": "boolean3",
+						"type": "boolean",
+						"isArray": false
+					},
+					{
+						"name": "boolean4",
+						"type": "boolean",
+						"isArray": false
+					},
+					{
+						"name": "boolean5",
+						"type": "boolean",
+						"isArray": false
+					},
+					{
+						"name": "boolean6",
+						"type": "boolean",
+						"isArray": false
+					}
+				],
+				"out": [
+					{
+						"name": "or",
+						"type": "boolean",
+						"isArray": false
+					}
+				]
+			}
+		}
+	},
+	"params": {
+		"restitution": 0
+	},
+	"inputs": ["transform_PLAYER1", "cameraControls_PLAYER1"],
+	"persisted_config": {
+		"variableNames": [],
+		"variables": [],
+		"functionNames": [
+			"getPlayerInputDataLeft",
+			"getPlayerInputDataRight",
+			"getPlayerInputDataForward",
+			"getPlayerInputDataBackward",
+			"getPlayerInputDataJump",
+			"getPlayerInputDataRun",
+			"orBooleans",
+			"keyboardEventMatchesConfig",
+			"setPlayerInput"
+		],
+		"serializedParamConfigs": [],
+		"eventDatas": [
+			{
+				"type": "keydown",
+				"emitter": "canvas",
+				"jsType": "onKey"
+			},
+			{
+				"type": "keyup",
+				"emitter": "canvas",
+				"jsType": "onKey"
+			}
+		]
+	}
+}
