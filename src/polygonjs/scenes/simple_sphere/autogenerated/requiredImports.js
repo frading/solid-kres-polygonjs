@@ -15,6 +15,7 @@ import { HemisphereLightSopNode } from "@polygonjs/polygonjs/dist/src/engine/nod
 import { MaterialSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Material";
 import { MaterialsNetworkSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/MaterialsNetwork";
 import { MergeSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Merge";
+import { ObjectPropertiesSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/ObjectProperties";
 import { PerspectiveCameraSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/PerspectiveCamera";
 import { PlaneHelperSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/PlaneHelper";
 import { PolarTransformSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/PolarTransform";
@@ -35,6 +36,7 @@ export const requiredImports_simple_sphere = {
     MaterialSopNode,
     MaterialsNetworkSopNode,
     MergeSopNode,
+    ObjectPropertiesSopNode,
     PerspectiveCameraSopNode,
     PlaneHelperSopNode,
     PolarTransformSopNode,

@@ -10,6 +10,7 @@ import { HemisphereLightSopNode } from "@polygonjs/polygonjs/dist/src/engine/nod
 import { MaterialSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Material";
 import { MaterialsNetworkSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/MaterialsNetwork";
 import { MergeSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Merge";
+import { ObjectPropertiesSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/ObjectProperties";
 import { PerspectiveCameraSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/PerspectiveCamera";
 import { PlaneHelperSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/PlaneHelper";
 import { PolarTransformSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/PolarTransform";
@@ -30,6 +31,7 @@ export class PolySceneWithNodeMap_simple_sphere extends PolyScene {
   node(path: "/geo1/material1"): MaterialSopNode;
   node(path: "/geo1/MAT"): MaterialsNetworkSopNode;
   node(path: "/geo1/MAT/meshStandard1"): MeshStandardMatNode;
+  node(path: "/geo1/objectProperties1"): ObjectPropertiesSopNode;
   node(path: "/ground"): GeoObjNode;
   node(path: "/ground/planeHelper1"): PlaneHelperSopNode;
   node(path: "/COP"): CopNetworkObjNode;
@@ -233,6 +235,21 @@ export interface PolySceneProps_simple_sphere {
   "geo1-MAT-meshStandard1--wireframeLinecap"?: ParamValueSerializedTypeMap["integer"];
   "geo1-MAT-meshStandard1--wireframeLinejoin"?: ParamValueSerializedTypeMap["integer"];
   "geo1-MAT-meshStandard1--useFog"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1-objectProperties1--applyToChildren"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1-objectProperties1--tname"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1-objectProperties1--name"?: ParamValueSerializedTypeMap["string"];
+  "geo1-objectProperties1--trenderOrder"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1-objectProperties1--renderOrder"?: ParamValueSerializedTypeMap["integer"];
+  "geo1-objectProperties1--tfrustumCulled"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1-objectProperties1--frustumCulled"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1-objectProperties1--tmatrixAutoUpdate"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1-objectProperties1--matrixAutoUpdate"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1-objectProperties1--tvisible"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1-objectProperties1--visible"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1-objectProperties1--tcastShadow"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1-objectProperties1--castShadow"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1-objectProperties1--treceiveShadow"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1-objectProperties1--receiveShadow"?: ParamValueSerializedTypeMap["boolean"];
   "ground--transform"?: ParamValueSerializedTypeMap["folder"];
   "ground--keepPosWhenParenting"?: ParamValueSerializedTypeMap["boolean"];
   "ground--rotationOrder"?: ParamValueSerializedTypeMap["integer"];

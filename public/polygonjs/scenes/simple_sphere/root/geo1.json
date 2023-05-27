@@ -9,7 +9,15 @@
 			"params": {
 				"material": "../MAT/meshStandard1"
 			},
-			"inputs": ["sphere1"],
+			"inputs": ["sphere1"]
+		},
+		"objectProperties1": {
+			"type": "objectProperties",
+			"params": {
+				"tname": 1,
+				"name": "player"
+			},
+			"inputs": ["material1"],
 			"flags": {
 				"display": true
 			}
