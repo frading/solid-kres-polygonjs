@@ -1,0 +1,81 @@
+{
+	"nodes": {
+		"geo1": {
+			"pos": [-50, -350],
+			"nodes": {
+				"sphere1": {
+					"pos": [0, -100]
+				},
+				"material1": {
+					"pos": [0, 200]
+				},
+				"MAT": {
+					"pos": [-200, 200],
+					"selection": ["meshStandard1"],
+					"nodes": {
+						"meshStandard1": {
+							"pos": [0, 0]
+						}
+					}
+				}
+			}
+		},
+		"ground": {
+			"pos": [-50, -450],
+			"nodes": {
+				"planeHelper1": {
+					"pos": [-150, 150]
+				}
+			}
+		},
+		"COP": {
+			"pos": [-300, -50],
+			"selection": ["image1"],
+			"nodes": {
+				"envMap": {
+					"pos": [50, 250]
+				},
+				"imageEnv": {
+					"pos": [50, 100]
+				},
+				"image1": {
+					"pos": [-200, 100]
+				}
+			}
+		},
+		"lights": {
+			"pos": [-50, -250],
+			"selection": ["hemisphereLight1"],
+			"nodes": {
+				"hemisphereLight1": {
+					"pos": [50, -50]
+				},
+				"spotLight1": {
+					"pos": [300, -50]
+				},
+				"polarTransform1": {
+					"pos": [300, 150]
+				},
+				"merge1": {
+					"pos": [100, 300]
+				}
+			}
+		},
+		"cameras": {
+			"pos": [-50, -150],
+			"nodes": {
+				"perspectiveCamera1": {
+					"pos": [0, -50]
+				},
+				"cameraControls1": {
+					"pos": [0, 150],
+					"nodes": {
+						"cameraOrbitControls1": {
+							"pos": [0, 0]
+						}
+					}
+				}
+			}
+		}
+	}
+}
